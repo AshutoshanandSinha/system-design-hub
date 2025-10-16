@@ -30,9 +30,20 @@ Scalability is the capability of a system to handle a growing amount of work by 
 
 ### Types of Scaling
 
-![Vertical vs Horizontal Scaling](https://i.imgur.com/rYVlK6q.png)
+```
+Vertical Scaling (Scale Up)          Horizontal Scaling (Scale Out)
+┌─────────────────┐                  ┌────┐ ┌────┐ ┌────┐
+│                 │                  │    │ │    │ │    │
+│   More Power    │                  │ S1 │ │ S2 │ │ S3 │
+│   4→16 CPU      │         vs       │    │ │    │ │    │
+│   8→64 GB RAM   │                  └────┘ └────┘ └────┘
+│                 │                  ┌────┐ ┌────┐ ┌────┐
+│  Single Server  │                  │ S4 │ │ S5 │ │ S6 │
+└─────────────────┘                  └────┘ └────┘ └────┘
+      ↑ Limited                        ↑ Unlimited Growth
+```
 
-*Visual comparison of vertical (scale-up) vs horizontal (scale-out) scaling strategies.*
+*Vertical scaling adds resources to one machine; Horizontal scaling adds more machines.*
 
 #### Vertical Scaling (Scale Up)
 {: .text-green-200}
@@ -87,9 +98,25 @@ After:  10 servers behind a load balancer
 
 ## Performance Metrics
 
-![Latency vs Throughput](https://i.imgur.com/YMXqJNm.png)
+### Latency vs Throughput Relationship
 
-*The relationship between latency (response time) and throughput (requests per second).*
+```
+High Throughput, High Latency:    Batch Processing
+    [========> 1M records/hour, but 1 hour to complete]
+
+Low Latency, Moderate Throughput: Real-time API
+    [===> 100ms response, 10K requests/sec]
+
+Sweet Spot:                       Optimized System
+    [====> 200ms response, 100K requests/sec]
+```
+
+| Metric | Definition | Example |
+|:-------|:-----------|:--------|
+| **Latency** | Time to complete one request | 100ms response time |
+| **Throughput** | Requests completed per time unit | 10,000 requests/second |
+
+*Latency measures speed per request; throughput measures overall capacity.*
 
 ### Latency
 

@@ -29,9 +29,24 @@ The CAP theorem, also known as Brewer's theorem (proposed by Eric Brewer in 2000
 
 ### CAP Theorem Visualization
 
-![CAP Theorem Diagram](https://i.imgur.com/5KjJxGh.png)
+```
+        Consistency
+             /\
+            /  \
+           /    \
+          /  CA  \
+         /        \
+        /          \
+       /            \
+      /______________\
+Availability    Partition Tolerance
+        \      /
+         \ CP /
+          \  /
+          AP
+```
 
-*The CAP triangle showing the three properties and the trade-offs between them.*
+*The CAP triangle: In a distributed system with network partitions, you must choose between Consistency (CP) or Availability (AP).*
 
 ---
 
@@ -86,9 +101,15 @@ Both data centers continue operating independently
 {: .highlight }
 **Key Insight**: In distributed systems, network partitions WILL happen. Therefore, you must choose between Consistency and Availability.
 
-![CAP Theorem Examples](https://i.imgur.com/WpPqHxL.png)
+### Database Examples by CAP Category
 
-*Examples of databases categorized by their CAP trade-offs.*
+| Category | Priority | Databases | Use Cases |
+|:---------|:---------|:----------|:----------|
+| **CP** | Consistency + Partition Tolerance | MongoDB, HBase, Redis, ZooKeeper | Banking, Bookings, Inventory |
+| **AP** | Availability + Partition Tolerance | Cassandra, DynamoDB, CouchDB, Riak | Social Media, Analytics, Caching |
+| **CA** | Consistency + Availability | PostgreSQL, MySQL (single node) | Traditional RDBMS |
+
+*Real-world database choices based on CAP trade-offs.*
 
 ---
 

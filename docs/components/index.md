@@ -18,9 +18,31 @@ Deep dive into the building blocks of distributed systems.
 
 Modern distributed systems are built from various infrastructure components, each serving specific purposes. Understanding these components deeply is crucial for mid-level to senior engineers designing scalable systems.
 
-![System Architecture Components](https://i.imgur.com/2xvQZJm.png)
+### Distributed System Architecture Layers
 
-*Common infrastructure components in a distributed system architecture.*
+```
+┌─────────────────────────────────────────────┐
+│         Client Layer (Web/Mobile)           │
+└──────────────────┬──────────────────────────┘
+                   ↓
+┌─────────────────────────────────────────────┐
+│  Traffic Management (Load Balancer, CDN)    │
+└──────────────────┬──────────────────────────┘
+                   ↓
+┌─────────────────────────────────────────────┐
+│    Application Layer (API Servers)          │
+└──────────────────┬──────────────────────────┘
+                   ↓
+┌─────────────────────────────────────────────┐
+│   Caching Layer (Redis, Memcached)          │
+└──────────────────┬──────────────────────────┘
+                   ↓
+┌─────────────────────────────────────────────┐
+│   Data Layer (Databases, Message Queues)    │
+└─────────────────────────────────────────────┘
+```
+
+*Typical layered architecture of a modern distributed system.*
 
 ## What You'll Learn
 
@@ -145,9 +167,23 @@ Every technology choice involves trade-offs. There's no perfect solution, only a
 
 ### Pattern 1: Read-Heavy Workload
 
-![Caching Architecture](https://i.imgur.com/vN8QhXL.png)
+**Read-Heavy Architecture Flow**
 
-*Typical caching architecture for read-heavy workloads.*
+```
+User Request
+     ↓
+   [CDN] ←── Static Assets (95% Hit Rate)
+     ↓ Miss
+[Load Balancer]
+     ↓
+[API Server]
+     ↓
+  [Cache] ←── Hot Data (90% Hit Rate)
+     ↓ Miss
+ [Database] ←── Cold Data
+     ↓
+[Read Replicas]
+```
 
 ```
 User Request → CDN → Load Balancer → Cache → Database

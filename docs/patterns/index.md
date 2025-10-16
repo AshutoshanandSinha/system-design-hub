@@ -18,9 +18,25 @@ Common architectural patterns and best practices for building distributed system
 
 Design patterns are proven solutions to common problems in system design. Understanding these patterns helps you design better systems faster and communicate architectural decisions effectively.
 
-![System Design Patterns Overview](https://i.imgur.com/KZ7QxnH.png)
+### Common System Design Patterns
 
-*Common system design patterns and architectural styles.*
+```
+┌─────────────────────────────────────────────────────┐
+│  Architecture Patterns                              │
+│  • Monolithic  • Microservices  • Event-Driven     │
+├─────────────────────────────────────────────────────┤
+│  Scalability Patterns                               │
+│  • Load Balancing  • Caching  • Sharding           │
+├─────────────────────────────────────────────────────┤
+│  Reliability Patterns                               │
+│  • Circuit Breaker  • Retry  • Bulkhead            │
+├─────────────────────────────────────────────────────┤
+│  Data Patterns                                      │
+│  • CQRS  • Event Sourcing  • Saga                  │
+└─────────────────────────────────────────────────────┘
+```
+
+*Organize your system design knowledge across four key pattern categories.*
 
 ## What You'll Learn
 
@@ -35,9 +51,26 @@ Design patterns are proven solutions to common problems in system design. Unders
 ### Architecture Patterns
 Core architectural styles for organizing your system.
 
-![Monolith vs Microservices](https://i.imgur.com/8dYQfMp.png)
+**Architecture Evolution**
 
-*Comparison between monolithic and microservices architectures.*
+```
+MONOLITHIC                      MICROSERVICES
+┌─────────────────┐            ┌───┐ ┌───┐ ┌───┐
+│                 │            │ A │ │ B │ │ C │
+│   All-in-One    │            └───┘ └───┘ └───┘
+│   Application   │    →→→     ┌───┐ ┌───┐ ┌───┐
+│                 │            │ D │ │ E │ │ F │
+│                 │            └───┘ └───┘ └───┘
+└─────────────────┘            Independent Services
+   Single Deploy               Deploy Independently
+```
+
+| Aspect | Monolithic | Microservices |
+|:-------|:-----------|:--------------|
+| **Complexity** | Low | High |
+| **Scalability** | Limited | High |
+| **Deployment** | All-or-nothing | Independent |
+| **Best For** | Small teams | Large organizations |
 
 - **Monolithic Architecture**
 - **Microservices Architecture**

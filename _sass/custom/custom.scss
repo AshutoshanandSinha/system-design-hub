@@ -1,26 +1,84 @@
 // Custom styles for System Design Hub
 
-// Hero section styling
+// Hero section styling with gradient
 .fs-9 {
   font-size: 2.5rem !important;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-// Improve button styling
+.fs-6 {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+// Improve button styling with gradients
 .btn {
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-weight: 600;
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
   margin: 0.5rem 0.5rem 0.5rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-green {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  }
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
+  }
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+    background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%) !important;
+  }
+}
+
+.btn-red {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%) !important;
   }
 }
 
@@ -45,17 +103,39 @@
   color: #fde047 !important;
 }
 
-// Code example boxes
+// Code example boxes with gradient borders
 .code-example {
-  background-color: rgba(59, 130, 246, 0.1);
-  border-left: 4px solid #3b82f6;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
 
   h3 {
     margin-top: 0;
-    color: #3b82f6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
   }
 }
 
@@ -78,37 +158,65 @@ img {
   }
 }
 
-// Callout improvements
+// Enhanced callout boxes with icons
 .highlight {
-  background-color: rgba(253, 224, 71, 0.1);
-  border-left: 4px solid #fde047;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(253, 224, 71, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%);
+  border-left: 4px solid #fbbf24;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+
+  &::before {
+    content: '💡';
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .important {
-  background-color: rgba(96, 165, 250, 0.1);
-  border-left: 4px solid #60a5fa;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+
+  &::before {
+    content: '📌';
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .note {
-  background-color: rgba(196, 181, 253, 0.1);
-  border-left: 4px solid #c4b5fd;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  border-left: 4px solid #8b5cf6;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+
+  &::before {
+    content: '📝';
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .warning {
-  background-color: rgba(248, 113, 113, 0.1);
-  border-left: 4px solid #f87171;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+  border-left: 4px solid #ef4444;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+
+  &::before {
+    content: '⚠️';
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
 }
 
 // Table improvements

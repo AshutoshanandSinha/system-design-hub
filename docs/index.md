@@ -48,7 +48,7 @@ Start here if you're new to system design or have limited experience with distri
 - ✅ Simple architecture patterns
 - ✅ HTTP, REST APIs, and basic networking
 
-[Start Learning →]({{ site.baseurl }}{% link docs/fundamentals/index.md %}){: .btn .btn-green }
+[Start Learning →]({% link docs/fundamentals/index.md %}){: .btn .btn-green }
 
 </div>
 
@@ -68,7 +68,7 @@ You understand the basics and want to design more complex systems.
 - ✅ Microservices architecture
 - ✅ Load balancing and CDNs
 
-[Explore Components →]({{ site.baseurl }}{% link docs/components/index.md %}){: .btn .btn-blue }
+[Explore Components →]({% link docs/components/index.md %}){: .btn .btn-blue }
 
 </div>
 
@@ -88,7 +88,7 @@ You're designing systems independently and making architectural decisions.
 - ✅ System reliability and monitoring
 - ✅ Architecture decision frameworks
 
-[Study Patterns →]({{ site.baseurl }}{% link docs/patterns/index.md %}){: .btn .btn-purple }
+[Study Patterns →]({% link docs/patterns/index.md %}){: .btn .btn-purple }
 
 </div>
 
@@ -121,14 +121,14 @@ You're architecting complex systems and influencing technical strategy.
 
 ### 🆕 New to System Design?
 
-1. 📚 **Read the Fundamentals** - Start with [Core Concepts]({{ site.baseurl }}{% link docs/fundamentals/core-concepts.md %})
-2. 🏗️ **Learn the Components** - Understand [Infrastructure Building Blocks]({{ site.baseurl }}{% link docs/components/index.md %})
-3. 🎨 **Study Design Patterns** - Explore [Common Patterns]({{ site.baseurl }}{% link docs/patterns/index.md %})
-4. 💪 **Practice** - Work through [Interview Problems]({{ site.baseurl }}{% link docs/interview-prep/index.md %})
+1. 📚 **Read the Fundamentals** - Start with [Core Concepts]({% link docs/fundamentals/core-concepts.md %})
+2. 🏗️ **Learn the Components** - Understand [Infrastructure Building Blocks]({% link docs/components/index.md %})
+3. 🎨 **Study Design Patterns** - Explore [Common Patterns]({% link docs/patterns/index.md %})
+4. 💪 **Practice** - Work through [Interview Problems]({% link docs/interview-prep/index.md %})
 
 ### 🎯 Preparing for Interviews?
 
-Check out our [Interview Preparation Guide]({{ site.baseurl }}{% link docs/interview-prep/index.md %}) with:
+Check out our [Interview Preparation Guide]({% link docs/interview-prep/index.md %}) with:
 - ✅ Common system design questions
 - ✅ Step-by-step solution approaches
 - ✅ Tips for different experience levels
@@ -204,7 +204,7 @@ Explore our Advanced Topics (Coming Soon) covering:
 - 🎯 **Tech Dummies Narendra L** - Practical examples
 - 🎨 **ByteByteGo** - Visual explanations
 
-[View All Resources →]({{ site.baseurl }}{% link docs/resources/index.md %}){: .btn }
+[View All Resources →]({% link docs/resources/index.md %}){: .btn }
 
 ---
 
