@@ -27,6 +27,12 @@ The CAP theorem, also known as Brewer's theorem (proposed by Eric Brewer in 2000
 {: .important }
 > In the presence of a network partition, you must choose between consistency and availability. You cannot have both.
 
+### CAP Theorem Visualization
+
+![CAP Theorem Diagram](https://miro.medium.com/v2/resize:fit:1400/1*rxTP-_STj-QRDt1X9fdVlA.png)
+
+*The CAP triangle showing the three properties and the trade-offs between them.*
+
 ---
 
 ## The Three Guarantees
@@ -79,6 +85,10 @@ Both data centers continue operating independently
 
 {: .highlight }
 **Key Insight**: In distributed systems, network partitions WILL happen. Therefore, you must choose between Consistency and Availability.
+
+![CAP Theorem Examples](https://www.researchgate.net/publication/330886718/figure/fig1/AS:722631758929920@1549507712568/Examples-of-NoSQL-databases-in-the-CAP-theorem.png)
+
+*Examples of databases categorized by their CAP trade-offs.*
 
 ---
 
@@ -437,9 +447,9 @@ Hybrid Approach:
 
 ## Next Steps
 
-- Learn about [Consistency Models](/fundamentals/consistency-models) in depth
-- Explore [Database Selection](/components/databases) based on CAP requirements
-- Study [Replication Strategies](/patterns/replication) for different CAP choices
+- Explore [Database Selection](../components/) based on CAP requirements
+- Study [Design Patterns](../patterns/) for different architectural choices
+- Practice with [Interview Problems](../interview-prep/)
 
 ---
 

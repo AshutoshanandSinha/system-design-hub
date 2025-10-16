@@ -213,29 +213,29 @@ Discuss:
 
 ### Easy Level (Junior/Mid)
 
-1. **[Design a URL Shortener](/interview-prep/url-shortener)** ⭐⭐⭐⭐⭐
-2. **[Design a Pastebin](/interview-prep/pastebin)** ⭐⭐⭐⭐
-3. **[Design a Rate Limiter](/interview-prep/rate-limiter)** ⭐⭐⭐⭐
-4. **[Design a Key-Value Store](/interview-prep/key-value-store)** ⭐⭐⭐⭐
-5. **[Design a Chat Application](/interview-prep/chat-app)** ⭐⭐⭐⭐
+1. **Design a URL Shortener** ⭐⭐⭐⭐⭐ (Coming Soon)
+2. **Design a Pastebin** ⭐⭐⭐⭐ (Coming Soon)
+3. **Design a Rate Limiter** ⭐⭐⭐⭐ (Coming Soon)
+4. **Design a Key-Value Store** ⭐⭐⭐⭐ (Coming Soon)
+5. **Design a Chat Application** ⭐⭐⭐⭐ (Coming Soon)
 
 ### Medium Level (Senior)
 
-1. **[Design Instagram](/interview-prep/instagram)** ⭐⭐⭐⭐⭐
-2. **[Design Twitter](/interview-prep/twitter)** ⭐⭐⭐⭐⭐
-3. **[Design Netflix](/interview-prep/netflix)** ⭐⭐⭐⭐⭐
-4. **[Design Uber](/interview-prep/uber)** ⭐⭐⭐⭐⭐
-5. **[Design YouTube](/interview-prep/youtube)** ⭐⭐⭐⭐⭐
-6. **[Design WhatsApp](/interview-prep/whatsapp)** ⭐⭐⭐⭐
-7. **[Design Amazon](/interview-prep/amazon)** ⭐⭐⭐⭐⭐
+1. **Design Instagram** ⭐⭐⭐⭐⭐ (Coming Soon)
+2. **Design Twitter** ⭐⭐⭐⭐⭐ (Coming Soon)
+3. **Design Netflix** ⭐⭐⭐⭐⭐ (Coming Soon)
+4. **Design Uber** ⭐⭐⭐⭐⭐ (Coming Soon)
+5. **Design YouTube** ⭐⭐⭐⭐⭐ (Coming Soon)
+6. **Design WhatsApp** ⭐⭐⭐⭐ (Coming Soon)
+7. **Design Amazon** ⭐⭐⭐⭐⭐ (Coming Soon)
 
 ### Hard Level (Staff+)
 
-1. **[Design Google Search](/interview-prep/google-search)** ⭐⭐⭐⭐⭐
-2. **[Design Google Maps](/interview-prep/google-maps)** ⭐⭐⭐⭐⭐
-3. **[Design Distributed Cache](/interview-prep/distributed-cache)** ⭐⭐⭐⭐
-4. **[Design Global File Storage](/interview-prep/file-storage)** ⭐⭐⭐⭐
-5. **[Design Ad Click Aggregator](/interview-prep/ad-aggregator)** ⭐⭐⭐⭐
+1. **Design Google Search** ⭐⭐⭐⭐⭐ (Coming Soon)
+2. **Design Google Maps** ⭐⭐⭐⭐⭐ (Coming Soon)
+3. **Design Distributed Cache** ⭐⭐⭐⭐ (Coming Soon)
+4. **Design Global File Storage** ⭐⭐⭐⭐ (Coming Soon)
+5. **Design Ad Click Aggregator** ⭐⭐⭐⭐ (Coming Soon)
 
 ## Question Templates by Category
 
@@ -482,9 +482,9 @@ After each interview or mock:
 
 ## Next Steps
 
-- Start with [URL Shortener](/interview-prep/url-shortener) problem
-- Review [Case Studies](/case-studies/) for real-world examples
-- Practice with [Common Questions](/interview-prep/questions/)
+- Review [Core Concepts](../fundamentals/core-concepts) to strengthen fundamentals
+- Study [Design Patterns](../patterns/) for architectural knowledge
+- Explore [Components](../components/) to understand building blocks
 - Join our [Discussion Forum](https://github.com/AshutoshanandSinha/system-design-hub/discussions)
 
 ---

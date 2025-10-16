@@ -30,6 +30,10 @@ Scalability is the capability of a system to handle a growing amount of work by 
 
 ### Types of Scaling
 
+![Vertical vs Horizontal Scaling](https://miro.medium.com/v2/resize:fit:1400/1*On7yijHHXZUAqMTj6fB3Rw.png)
+
+*Visual comparison of vertical (scale-up) vs horizontal (scale-out) scaling strategies.*
+
 #### Vertical Scaling (Scale Up)
 {: .text-green-200}
 
@@ -82,6 +86,10 @@ After:  10 servers behind a load balancer
 ---
 
 ## Performance Metrics
+
+![Latency vs Throughput](https://miro.medium.com/v2/resize:fit:1400/1*bDYu6z7rUAkH8HxLGvUNOA.png)
+
+*The relationship between latency (response time) and throughput (requests per second).*
 
 ### Latency
 
@@ -382,9 +390,9 @@ Why does Netflix use eventual consistency for viewing history but strong consist
 
 ## Next Steps
 
-- Learn about [CAP Theorem](/fundamentals/cap-theorem) to understand consistency trade-offs
-- Explore [Consistency Models](/fundamentals/consistency-models) in depth
-- Practice [Back-of-Envelope Calculations](/fundamentals/calculations)
+- Learn about [CAP Theorem](cap-theorem) to understand consistency trade-offs
+- Explore [Design Patterns](../patterns/) for common architectural solutions
+- Study [Infrastructure Components](../components/) to understand building blocks
 
 ---
 

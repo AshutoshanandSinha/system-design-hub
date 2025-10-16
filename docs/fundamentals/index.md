@@ -40,12 +40,14 @@ Strong fundamentals enable you to:
 
 ## Topics in This Section
 
-1. **[Core Concepts](/fundamentals/core-concepts)** - Scalability, availability, and performance
-2. **[CAP Theorem](/fundamentals/cap-theorem)** - Consistency, availability, and partition tolerance
-3. **[Consistency Models](/fundamentals/consistency-models)** - Strong, eventual, and weak consistency
-4. **[Back-of-Envelope Calculations](/fundamentals/calculations)** - Estimating system requirements
-5. **[Networking Fundamentals](/fundamentals/networking)** - Protocols and communication patterns
-6. **[API Design](/fundamentals/api-design)** - REST, GraphQL, gRPC, and WebSockets
+1. **[Core Concepts](core-concepts)** - Scalability, availability, and performance
+2. **[CAP Theorem](cap-theorem)** - Consistency, availability, and partition tolerance
+
+### Coming Soon
+3. **Consistency Models** - Strong, eventual, and weak consistency
+4. **Back-of-Envelope Calculations** - Estimating system requirements
+5. **Networking Fundamentals** - Protocols and communication patterns
+6. **API Design** - REST, GraphQL, gRPC, and WebSockets
 
 ## Learning Path
 
@@ -101,4 +103,4 @@ Once you've mastered the fundamentals, move on to:
 
 ---
 
-Ready to start? Begin with [Core Concepts](/fundamentals/core-concepts) →
+Ready to start? Begin with [Core Concepts](core-concepts) →

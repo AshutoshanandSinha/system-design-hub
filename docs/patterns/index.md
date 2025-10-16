@@ -18,6 +18,10 @@ Common architectural patterns and best practices for building distributed system
 
 Design patterns are proven solutions to common problems in system design. Understanding these patterns helps you design better systems faster and communicate architectural decisions effectively.
 
+![System Design Patterns Overview](https://miro.medium.com/v2/resize:fit:1400/1*0Tprh8nAqKhZ7sLjMfqLhA.png)
+
+*Common system design patterns and architectural styles.*
+
 ## What You'll Learn
 
 - **Architectural Patterns**: Microservices, Event-Driven, CQRS
@@ -30,6 +34,10 @@ Design patterns are proven solutions to common problems in system design. Unders
 
 ### Architecture Patterns
 Core architectural styles for organizing your system.
+
+![Monolith vs Microservices](https://miro.medium.com/v2/resize:fit:1400/1*OcmVkcsM5BWRDrAZ_hXLag.png)
+
+*Comparison between monolithic and microservices architectures.*
 
 - **Monolithic Architecture**
 - **Microservices Architecture**
@@ -81,14 +89,15 @@ Inter-service and client-server communication.
 
 ## Topics in This Section
 
-1. **[Microservices Architecture](/patterns/microservices)** - Design, benefits, challenges
-2. **[Event-Driven Architecture](/patterns/event-driven)** - Events, streams, and choreography
-3. **[CQRS & Event Sourcing](/patterns/cqrs-event-sourcing)** - Separating reads and writes
-4. **[Database Patterns](/patterns/database-patterns)** - Sharding, replication, partitioning
-5. **[Caching Strategies](/patterns/caching-strategies)** - When and how to cache
-6. **[Resilience Patterns](/patterns/resilience)** - Circuit breakers, retries, bulkheads
-7. **[API Design Patterns](/patterns/api-patterns)** - REST, GraphQL, gRPC
-8. **[Security Patterns](/patterns/security)** - Authentication, authorization, encryption
+### Coming Soon
+1. **Microservices Architecture** - Design, benefits, challenges
+2. **Event-Driven Architecture** - Events, streams, and choreography
+3. **CQRS & Event Sourcing** - Separating reads and writes
+4. **Database Patterns** - Sharding, replication, partitioning
+5. **Caching Strategies** - When and how to cache
+6. **Resilience Patterns** - Circuit breakers, retries, bulkheads
+7. **API Design Patterns** - REST, GraphQL, gRPC
+8. **Security Patterns** - Authentication, authorization, encryption
 
 ## Pattern Selection Guide
 
@@ -461,10 +470,9 @@ Track:
 
 ## Next Steps
 
-- Learn about [Microservices Architecture](/patterns/microservices) in depth
-- Explore [Event-Driven Architecture](/patterns/event-driven)
-- Study [Database Patterns](/patterns/database-patterns)
-- Practice with [Case Studies](/case-studies/)
+- Review [Core Concepts](../fundamentals/core-concepts) for foundation knowledge
+- Study [Infrastructure Components](../components/) to understand building blocks
+- Practice with [Interview Problems](../interview-prep/)
 
 ---
 

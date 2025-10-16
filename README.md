@@ -3,7 +3,6 @@
 > A comprehensive, one-stop resource for learning system design - from Junior Engineer to Distinguished Engineer
 
 [![GitHub Pages](https://img.shields.io/badge/docs-live-brightgreen)](https://AshutoshanandSinha.github.io/system-design-hub)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
@@ -100,10 +99,6 @@ This repository curates content from various high-quality sources including:
 - DesignGurus.io
 - Martin Kleppmann's books
 - And many more...
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 

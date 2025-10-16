@@ -18,6 +18,10 @@ Deep dive into the building blocks of distributed systems.
 
 Modern distributed systems are built from various infrastructure components, each serving specific purposes. Understanding these components deeply is crucial for mid-level to senior engineers designing scalable systems.
 
+![System Architecture Components](https://miro.medium.com/v2/resize:fit:1400/1*wZ0sVjfqMRgXGT8F5sLj8g.png)
+
+*Common infrastructure components in a distributed system architecture.*
+
 ## What You'll Learn
 
 This section covers the key infrastructure components used in system design:
@@ -96,14 +100,15 @@ Focus on architectural patterns and cost optimization:
 
 ## Topics in This Section
 
-1. **[Load Balancers](/components/load-balancers)** - Traffic distribution and algorithms
-2. **[Databases](/components/databases)** - SQL, NoSQL, and NewSQL comparison
-3. **[Caching](/components/caching)** - Strategies, patterns, and implementations
-4. **[Message Queues](/components/message-queues)** - Async communication patterns
-5. **[CDNs](/components/cdns)** - Content delivery and edge computing
-6. **[API Gateways](/components/api-gateways)** - API management and routing
-7. **[Object Storage](/components/object-storage)** - Scalable file storage
-8. **[Search Engines](/components/search)** - Elasticsearch, Solr, and full-text search
+### Coming Soon
+1. **Load Balancers** - Traffic distribution and algorithms
+2. **Databases** - SQL, NoSQL, and NewSQL comparison
+3. **Caching** - Strategies, patterns, and implementations
+4. **Message Queues** - Async communication patterns
+5. **CDNs** - Content delivery and edge computing
+6. **API Gateways** - API management and routing
+7. **Object Storage** - Scalable file storage
+8. **Search Engines** - Elasticsearch, Solr, and full-text search
 
 ## Component Selection Framework
 
@@ -139,6 +144,10 @@ Every technology choice involves trade-offs. There's no perfect solution, only a
 ## Common Patterns
 
 ### Pattern 1: Read-Heavy Workload
+
+![Caching Architecture](https://miro.medium.com/v2/resize:fit:1400/1*BGaH8JhSLCpyMH1sJqBxNg.png)
+
+*Typical caching architecture for read-heavy workloads.*
 
 ```
 User Request → CDN → Load Balancer → Cache → Database
@@ -334,10 +343,9 @@ Metrics to Track:
 
 ## Next Steps
 
-- Deep dive into [Load Balancers](/components/load-balancers)
-- Learn about [Database Selection](/components/databases)
-- Explore [Caching Strategies](/components/caching)
-- Study [Message Queue Patterns](/components/message-queues)
+- Review [Fundamentals](../fundamentals/) to strengthen your foundation
+- Study [Design Patterns](../patterns/) to learn architectural approaches
+- Practice with [Interview Problems](../interview-prep/)
 
 ---
 

@@ -46,7 +46,7 @@ Start here if you're new to system design or have limited experience with distri
 - Simple architecture patterns
 - HTTP, REST APIs, and basic networking
 
-[Start Learning →](/fundamentals/){: .btn .btn-green }
+[Start Learning →](fundamentals/){: .btn .btn-green }
 
 ---
 
@@ -62,7 +62,7 @@ You understand the basics and want to design more complex systems.
 - Microservices architecture
 - Load balancing and CDNs
 
-[Explore Components →](/components/){: .btn .btn-blue }
+[Explore Components →](components/){: .btn .btn-blue }
 
 ---
 
@@ -78,7 +78,7 @@ You're designing systems independently and making architectural decisions.
 - System reliability and monitoring
 - Architecture decision frameworks
 
-[Study Patterns →](/patterns/){: .btn .btn-purple }
+[Study Patterns →](patterns/){: .btn .btn-purple }
 
 ---
 
@@ -94,7 +94,7 @@ You're architecting complex systems and influencing technical strategy.
 - Organizational patterns
 - Technical leadership and strategy
 
-[Advanced Topics →](/advanced-topics/){: .btn .btn-red }
+[Advanced Topics](advanced-topics/){: .btn .btn-red } (Coming Soon)
 
 ---
 
@@ -102,14 +102,14 @@ You're architecting complex systems and influencing technical strategy.
 
 ### New to System Design?
 
-1. **Read the Fundamentals** - Start with [Core Concepts](/fundamentals/core-concepts)
-2. **Learn the Components** - Understand [Infrastructure Building Blocks](/components/)
-3. **Study Real Examples** - Explore [Case Studies](/case-studies/)
-4. **Practice** - Work through [Interview Problems](/interview-prep/)
+1. **Read the Fundamentals** - Start with [Core Concepts](fundamentals/core-concepts)
+2. **Learn the Components** - Understand [Infrastructure Building Blocks](components/)
+3. **Study Design Patterns** - Explore [Common Patterns](patterns/)
+4. **Practice** - Work through [Interview Problems](interview-prep/)
 
 ### Preparing for Interviews?
 
-Check out our [Interview Preparation Guide](/interview-prep/) with:
+Check out our [Interview Preparation Guide](interview-prep/) with:
 - Common system design questions
 - Step-by-step solution approaches
 - Tips for different experience levels
@@ -117,7 +117,7 @@ Check out our [Interview Preparation Guide](/interview-prep/) with:
 
 ### Want to Go Deep?
 
-Explore our [Advanced Topics](/advanced-topics/) covering:
+Explore our Advanced Topics (Coming Soon) covering:
 - Distributed consensus algorithms
 - Multi-region architectures
 - Chaos engineering
@@ -181,7 +181,7 @@ Explore our [Advanced Topics](/advanced-topics/) covering:
 - **Tech Dummies Narendra L** - Practical examples
 - **ByteByteGo** - Visual explanations
 
-[View All Resources →](/resources/){: .btn }
+[View All Resources →](resources/){: .btn }
 
 ---
 
