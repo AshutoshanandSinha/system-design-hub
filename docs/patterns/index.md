@@ -18,7 +18,7 @@ Common architectural patterns and best practices for building distributed system
 
 Design patterns are proven solutions to common problems in system design. Understanding these patterns helps you design better systems faster and communicate architectural decisions effectively.
 
-![System Design Patterns Overview](https://miro.medium.com/v2/resize:fit:1400/1*0Tprh8nAqKhZ7sLjMfqLhA.png)
+![System Design Patterns Overview](https://i.imgur.com/KZ7QxnH.png)
 
 *Common system design patterns and architectural styles.*
 
@@ -35,7 +35,7 @@ Design patterns are proven solutions to common problems in system design. Unders
 ### Architecture Patterns
 Core architectural styles for organizing your system.
 
-![Monolith vs Microservices](https://miro.medium.com/v2/resize:fit:1400/1*OcmVkcsM5BWRDrAZ_hXLag.png)
+![Monolith vs Microservices](https://i.imgur.com/8dYQfMp.png)
 
 *Comparison between monolithic and microservices architectures.*
 

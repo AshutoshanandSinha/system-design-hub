@@ -30,7 +30,7 @@ Scalability is the capability of a system to handle a growing amount of work by 
 
 ### Types of Scaling
 
-![Vertical vs Horizontal Scaling](https://miro.medium.com/v2/resize:fit:1400/1*On7yijHHXZUAqMTj6fB3Rw.png)
+![Vertical vs Horizontal Scaling](https://i.imgur.com/rYVlK6q.png)
 
 *Visual comparison of vertical (scale-up) vs horizontal (scale-out) scaling strategies.*
 
@@ -87,7 +87,7 @@ After:  10 servers behind a load balancer
 
 ## Performance Metrics
 
-![Latency vs Throughput](https://miro.medium.com/v2/resize:fit:1400/1*bDYu6z7rUAkH8HxLGvUNOA.png)
+![Latency vs Throughput](https://i.imgur.com/YMXqJNm.png)
 
 *The relationship between latency (response time) and throughput (requests per second).*
 

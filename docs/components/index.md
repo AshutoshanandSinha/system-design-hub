@@ -18,7 +18,7 @@ Deep dive into the building blocks of distributed systems.
 
 Modern distributed systems are built from various infrastructure components, each serving specific purposes. Understanding these components deeply is crucial for mid-level to senior engineers designing scalable systems.
 
-![System Architecture Components](https://miro.medium.com/v2/resize:fit:1400/1*wZ0sVjfqMRgXGT8F5sLj8g.png)
+![System Architecture Components](https://i.imgur.com/2xvQZJm.png)
 
 *Common infrastructure components in a distributed system architecture.*
 
@@ -145,7 +145,7 @@ Every technology choice involves trade-offs. There's no perfect solution, only a
 
 ### Pattern 1: Read-Heavy Workload
 
-![Caching Architecture](https://miro.medium.com/v2/resize:fit:1400/1*BGaH8JhSLCpyMH1sJqBxNg.png)
+![Caching Architecture](https://i.imgur.com/vN8QhXL.png)
 
 *Typical caching architecture for read-heavy workloads.*
 

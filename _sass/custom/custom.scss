@@ -1,0 +1,215 @@
+// Custom styles for System Design Hub
+
+// Hero section styling
+.fs-9 {
+  font-size: 2.5rem !important;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+// Improve button styling
+.btn {
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Level-specific colors
+.text-green-200 {
+  color: #86efac !important;
+}
+
+.text-blue-200 {
+  color: #93c5fd !important;
+}
+
+.text-purple-200 {
+  color: #d8b4fe !important;
+}
+
+.text-red-200 {
+  color: #fca5a5 !important;
+}
+
+.text-yellow-200 {
+  color: #fde047 !important;
+}
+
+// Code example boxes
+.code-example {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+
+  h3 {
+    margin-top: 0;
+    color: #3b82f6;
+  }
+}
+
+// Image styling - make diagrams look better
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+  display: block;
+
+  + em {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Callout improvements
+.highlight {
+  background-color: rgba(253, 224, 71, 0.1);
+  border-left: 4px solid #fde047;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.important {
+  background-color: rgba(96, 165, 250, 0.1);
+  border-left: 4px solid #60a5fa;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.note {
+  background-color: rgba(196, 181, 253, 0.1);
+  border-left: 4px solid #c4b5fd;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.warning {
+  background-color: rgba(248, 113, 113, 0.1);
+  border-left: 4px solid #f87171;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+// Table improvements
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  thead {
+    background-color: rgba(59, 130, 246, 0.1);
+
+    th {
+      padding: 12px;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:hover {
+        background-color: rgba(59, 130, 246, 0.05);
+      }
+
+      td {
+        padding: 12px;
+      }
+    }
+  }
+}
+
+// Section dividers
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.5), transparent);
+  margin: 3rem 0;
+}
+
+// Details/summary (collapsible sections)
+details {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5rem;
+
+    &:hover {
+      color: #3b82f6;
+    }
+  }
+}
+
+// Code blocks
+pre {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+// Inline code
+code {
+  background-color: rgba(59, 130, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+// Navigation improvements
+.site-nav {
+  .nav-list-item {
+    &:hover {
+      background-color: rgba(59, 130, 246, 0.1);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .fs-9 {
+    font-size: 1.8rem !important;
+  }
+
+  img {
+    margin: 1rem 0;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
