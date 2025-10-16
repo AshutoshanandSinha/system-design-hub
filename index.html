@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Design: Complete Reference Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-main">
+                    <h1 class="header-title">System Design: Complete Reference Guide</h1>
+                    <p class="header-subtitle">Everything you need to know about system design in one place</p>
+                </div>
+                <div class="header-controls">
+                    <div class="search-container">
+                        <input type="text" id="search-input" class="search-input" placeholder="Search concepts, patterns, problems..." />
+                        <button id="search-clear" class="search-clear hidden">×</button>
+                    </div>
+                    <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Sidebar Navigation -->
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-content">
+                    <div class="progress-summary">
+                        <h4>Learning Progress</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0% Complete</span>
+                    </div>
+
+                    <!-- Navigation Sections -->
+                    <div class="nav-sections">
+                        <!-- Architectural Patterns -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="architectural-patterns">
+                                <span class="nav-icon">🖇️</span>
+                                <span class="nav-text">Architectural Patterns</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="architectural-patterns-items">
+                                <button class="nav-item" data-category="architectural_patterns" data-topic="client-server">
+                                    <span class="nav-text">Client-Server Architecture</span>
+                                </button>
+                                <button class="nav-item" data-category="architectural_patterns" data-topic="microservices">
+                                    <span class="nav-text">Microservices Architecture</span>
+                                </button>
+                                <button class="nav-item" data-category="architectural_patterns" data-topic="serverless">
+                                    <span class="nav-text">Serverless Architecture</span>
+                                </button>
+                                <button class="nav-item" data-category="architectural_patterns" data-topic="event-driven">
+                                    <span class="nav-text">Event-Driven Architecture</span>
+                                </button>
+                                <button class="nav-item" data-category="architectural_patterns" data-topic="peer-to-peer">
+                                    <span class="nav-text">Peer-to-Peer (P2P) Architecture</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Key Concepts -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="key-concepts">
+                                <span class="nav-icon">📌</span>
+                                <span class="nav-text">Key Concepts</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="key-concepts-items">
+                                <button class="nav-item" data-category="key_concepts" data-topic="scalability">
+                                    <span class="nav-text">Scalability</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="availability">
+                                    <span class="nav-text">Availability</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="cap-theorem">
+                                    <span class="nav-text">CAP Theorem</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="acid-transactions">
+                                    <span class="nav-text">ACID Transactions</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="consistent-hashing">
+                                    <span class="nav-text">Consistent Hashing</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="rate-limiting">
+                                    <span class="nav-text">Rate Limiting</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="spof">
+                                    <span class="nav-text">Single Point of Failure (SPOF)</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="fault-tolerance">
+                                    <span class="nav-text">Fault Tolerance</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="consensus-algorithms">
+                                    <span class="nav-text">Consensus Algorithms</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="gossip-protocol">
+                                    <span class="nav-text">Gossip Protocol</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="service-discovery">
+                                    <span class="nav-text">Service Discovery</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="api-design">
+                                    <span class="nav-text">API Design</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="disaster-recovery">
+                                    <span class="nav-text">Disaster Recovery</span>
+                                </button>
+                                <button class="nav-item" data-category="key_concepts" data-topic="distributed-tracing">
+                                    <span class="nav-text">Distributed Tracing</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Building Blocks -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="building-blocks">
+                                <span class="nav-icon">🛠️</span>
+                                <span class="nav-text">Building Blocks</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="building-blocks-items">
+                                <button class="nav-item" data-category="building_blocks" data-topic="apis">
+                                    <span class="nav-text">APIs</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="cdn">
+                                    <span class="nav-text">Content Delivery Network (CDN)</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="proxy">
+                                    <span class="nav-text">Proxy vs Reverse Proxy</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="dns">
+                                    <span class="nav-text">Domain Name System (DNS)</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="caching">
+                                    <span class="nav-text">Caching</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="load-balancing">
+                                    <span class="nav-text">Load Balancing</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="databases">
+                                    <span class="nav-text">Database Types</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="message-queues">
+                                    <span class="nav-text">Message Queues</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="circuit-breaker">
+                                    <span class="nav-text">Circuit Breaker</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="api-gateway">
+                                    <span class="nav-text">API Gateway</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="websockets">
+                                    <span class="nav-text">WebSockets</span>
+                                </button>
+                                <button class="nav-item" data-category="building_blocks" data-topic="database-sharding">
+                                    <span class="nav-text">Database Sharding</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Trade-offs -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="tradeoffs">
+                                <span class="nav-icon">⚖️</span>
+                                <span class="nav-text">Trade-offs</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="tradeoffs-items">
+                                <button class="nav-item" data-category="tradeoffs" data-topic="consistency-vs-availability">
+                                    <span class="nav-text">Consistency vs Availability</span>
+                                </button>
+                                <button class="nav-item" data-category="tradeoffs" data-topic="latency-vs-throughput">
+                                    <span class="nav-text">Latency vs Throughput</span>
+                                </button>
+                                <button class="nav-item" data-category="tradeoffs" data-topic="horizontal-vs-vertical-scaling">
+                                    <span class="nav-text">Horizontal vs Vertical Scaling</span>
+                                </button>
+                                <button class="nav-item" data-category="tradeoffs" data-topic="sql-vs-nosql">
+                                    <span class="nav-text">SQL vs NoSQL</span>
+                                </button>
+                                <button class="nav-item" data-category="tradeoffs" data-topic="rest-vs-rpc">
+                                    <span class="nav-text">REST vs RPC</span>
+                                </button>
+                                <button class="nav-item" data-category="tradeoffs" data-topic="push-vs-pull">
+                                    <span class="nav-text">Push vs Pull Architecture</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Interview Problems -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="interview-problems">
+                                <span class="nav-icon">💻</span>
+                                <span class="nav-text">Interview Problems</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="interview-problems-items">
+                                <button class="nav-item" data-category="interview_problems" data-topic="easy">
+                                    <span class="nav-text">Easy Problems</span>
+                                </button>
+                                <button class="nav-item" data-category="interview_problems" data-topic="medium">
+                                    <span class="nav-text">Medium Problems</span>
+                                </button>
+                                <button class="nav-item" data-category="interview_problems" data-topic="hard">
+                                    <span class="nav-text">Hard Problems</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Complete Guide -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="complete-guide">
+                                <span class="nav-icon">📖</span>
+                                <span class="nav-text">Complete Guide</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="complete-guide-items">
+                                <button class="nav-item" data-category="complete_guide" data-topic="framework">
+                                    <span class="nav-text">Interview Framework</span>
+                                </button>
+                                <button class="nav-item" data-category="complete_guide" data-topic="easy">
+                                    <span class="nav-text">Easy Level Questions</span>
+                                </button>
+                                <button class="nav-item" data-category="complete_guide" data-topic="medium">
+                                    <span class="nav-text">Medium Level Questions</span>
+                                </button>
+                                <button class="nav-item" data-category="complete_guide" data-topic="hard">
+                                    <span class="nav-text">Hard Level Questions</span>
+                                </button>
+                                <button class="nav-item" data-category="complete_guide" data-topic="tips">
+                                    <span class="nav-text">Interview Success Tips</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Resources -->
+                        <div class="nav-section">
+                            <button class="nav-section-header" data-section="resources">
+                                <span class="nav-icon">📚</span>
+                                <span class="nav-text">Resources</span>
+                                <span class="nav-chevron">▼</span>
+                            </button>
+                            <div class="nav-items" id="resources-items">
+                                <button class="nav-item" data-category="resources" data-topic="books">
+                                    <span class="nav-text">Books</span>
+                                </button>
+                                <button class="nav-item" data-category="resources" data-topic="articles">
+                                    <span class="nav-text">Engineering Articles</span>
+                                </button>
+                                <button class="nav-item" data-category="resources" data-topic="papers">
+                                    <span class="nav-text">Research Papers</span>
+                                </button>
+                                <button class="nav-item" data-category="resources" data-topic="channels">
+                                    <span class="nav-text">YouTube Channels</span>
+                                </button>
+                                <button class="nav-item" data-category="resources" data-topic="newsletters">
+                                    <span class="nav-text">Newsletters</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div id="content-area" class="content-area">
+                    <!-- Home/Landing Content -->
+                    <div id="home-content" class="home-content">
+                        <div class="hero-section">
+                            <h1>Welcome to the System Design Complete Reference Guide</h1>
+                            <p>Your comprehensive resource for learning system design concepts, architectural patterns, and best practices.</p>
+
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">5</div>
+                                    <div class="stat-label">Architectural Patterns</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">14</div>
+                                    <div class="stat-label">Key Concepts</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">25+</div>
+                                    <div class="stat-label">Building Blocks</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">49</div>
+                                    <div class="stat-label">Interview Problems</div>
+                                </div>
+                            </div>
+
+                            <div class="quick-start">
+                                <h2>Quick Start</h2>
+                                <div class="path-cards">
+                                    <div class="path-card">
+                                        <h3>🎓 Learning Path</h3>
+                                        <p>New to system design? Start with Key Concepts, then explore Building Blocks and Architectural Patterns.</p>
+                                        <button class="path-button" onclick="navigateToTopic('key_concepts', 'scalability')">Start Learning</button>
+                                    </div>
+                                    <div class="path-card">
+                                        <h3>💼 Interview Path</h3>
+                                        <p>Preparing for interviews? Focus on Interview Problems and review fundamental concepts.</p>
+                                        <button class="path-button" onclick="navigateToTopic('interview_problems', 'easy')">Start Practicing</button>
+                                    </div>
+                                    <div class="path-card">
+                                        <h3>📖 Complete Guide</h3>
+                                        <p>Comprehensive interview preparation guide with 49 real-world problems and proven frameworks.</p>
+                                        <button class="path-button" onclick="navigateToTopic('complete_guide', 'framework')">Start Guide</button>
+                                    </div>
+                                    <div class="path-card">
+                                        <h3>🔍 Reference Path</h3>
+                                        <p>Looking for something specific? Use the search function or browse by category.</p>
+                                        <button class="path-button" onclick="document.getElementById('search-input').focus()">Search Topics</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Content Area -->
+                    <div id="dynamic-content" class="dynamic-content hidden">
+                        <!-- Content will be loaded here dynamically -->
+                    </div>
+
+                    <!-- Search Results -->
+                    <div id="search-results" class="search-results hidden">
+                        <h2>Search Results</h2>
+                        <div id="search-results-content"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
