@@ -51,19 +51,9 @@ Design patterns are proven solutions to common problems in system design. Unders
 ### Architecture Patterns
 Core architectural styles for organizing your system.
 
-**Architecture Evolution**
-
-```
-MONOLITHIC                      MICROSERVICES
-┌─────────────────┐            ┌───┐ ┌───┐ ┌───┐
-│                 │            │ A │ │ B │ │ C │
-│   All-in-One    │            └───┘ └───┘ └───┘
-│   Application   │    →→→     ┌───┐ ┌───┐ ┌───┐
-│                 │            │ D │ │ E │ │ F │
-│                 │            └───┘ └───┘ └───┘
-└─────────────────┘            Independent Services
-   Single Deploy               Deploy Independently
-```
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="https://raw.githubusercontent.com/donnemartin/system-design-primer/master/images/X20obNs.png" alt="Microservices" style="max-width: 700px; border-radius: 12px; box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);">
+</div>
 
 | Aspect | Monolithic | Microservices |
 |:-------|:-----------|:--------------|

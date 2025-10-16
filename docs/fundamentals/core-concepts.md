@@ -30,18 +30,9 @@ Scalability is the capability of a system to handle a growing amount of work by 
 
 ### Types of Scaling
 
-```
-Vertical Scaling (Scale Up)          Horizontal Scaling (Scale Out)
-┌─────────────────┐                  ┌────┐ ┌────┐ ┌────┐
-│                 │                  │    │ │    │ │    │
-│   More Power    │                  │ S1 │ │ S2 │ │ S3 │
-│   4→16 CPU      │         vs       │    │ │    │ │    │
-│   8→64 GB RAM   │                  └────┘ └────┘ └────┘
-│                 │                  ┌────┐ ┌────┐ ┌────┐
-│  Single Server  │                  │ S4 │ │ S5 │ │ S6 │
-└─────────────────┘                  └────┘ └────┘ └────┘
-      ↑ Limited                        ↑ Unlimited Growth
-```
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="https://raw.githubusercontent.com/donnemartin/system-design-primer/master/images/n41Azff.png" alt="Horizontal vs Vertical Scaling" style="max-width: 700px; border-radius: 12px; box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);">
+</div>
 
 *Vertical scaling adds resources to one machine; Horizontal scaling adds more machines.*
 

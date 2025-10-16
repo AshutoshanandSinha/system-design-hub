@@ -29,22 +29,9 @@ The CAP theorem, also known as Brewer's theorem (proposed by Eric Brewer in 2000
 
 ### CAP Theorem Visualization
 
-```
-        Consistency
-             /\
-            /  \
-           /    \
-          /  CA  \
-         /        \
-        /          \
-       /            \
-      /______________\
-Availability    Partition Tolerance
-        \      /
-         \ CP /
-          \  /
-          AP
-```
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="https://raw.githubusercontent.com/donnemartin/system-design-primer/master/images/bgLMI2u.png" alt="CAP Theorem" style="max-width: 600px; border-radius: 12px; box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);">
+</div>
 
 *The CAP triangle: In a distributed system with network partitions, you must choose between Consistency (CP) or Availability (AP).*
 

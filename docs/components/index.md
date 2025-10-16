@@ -167,23 +167,11 @@ Every technology choice involves trade-offs. There's no perfect solution, only a
 
 ### Pattern 1: Read-Heavy Workload
 
-**Read-Heavy Architecture Flow**
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="https://raw.githubusercontent.com/donnemartin/system-design-primer/master/images/OcjuRRH.png" alt="Load Balancer with multiple servers" style="max-width: 700px; border-radius: 12px; box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);">
+</div>
 
-```
-User Request
-     ↓
-   [CDN] ←── Static Assets (95% Hit Rate)
-     ↓ Miss
-[Load Balancer]
-     ↓
-[API Server]
-     ↓
-  [Cache] ←── Hot Data (90% Hit Rate)
-     ↓ Miss
- [Database] ←── Cold Data
-     ↓
-[Read Replicas]
-```
+**Caching Strategy:**
 
 ```
 User Request → CDN → Load Balancer → Cache → Database
