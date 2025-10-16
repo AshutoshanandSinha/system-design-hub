@@ -245,16 +245,34 @@ const systemDesignData = {
         "Auto-scaling Configuration: Set up cloud auto-scaling groups with appropriate metrics and thresholds"
       ],
       examples: [
-        "Netflix: Uses microservices and cloud auto-scaling to handle millions of concurrent streams worldwide",
-        "Amazon: Employs horizontal scaling across data centers to manage peak shopping traffic during events like Black Friday",
-        "Facebook: Utilizes database sharding and CDN networks to serve billions of users with personalized content",
-        "Uber: Implements geographic sharding and real-time scaling to handle varying demand across different cities and times"
+        "Netflix: Uses microservices and cloud auto-scaling to handle millions of concurrent streams worldwide. They run thousands of microservices across thousands of servers to serve 200+ million subscribers with horizontal scaling.",
+        "Amazon: Employs horizontal scaling across data centers to manage peak shopping traffic during events like Black Friday. Their architecture can scale to handle 10x normal traffic by adding more EC2 instances behind load balancers.",
+        "Facebook: Utilizes database sharding and CDN networks to serve billions of users with personalized content. They use TAO (The Associations and Objects) distributed data store with geographic sharding to handle massive scale.",
+        "Uber: Implements geographic sharding and real-time scaling to handle varying demand across different cities and times. Each city operates as an independent shard that can scale based on local demand patterns.",
+        "Instagram: Scaled from 14 million users to over 1 billion by using database sharding, aggressive caching with Memcached, and CDN for photo delivery. They famously operated with a very small team by leveraging cloud infrastructure."
+      ],
+      latency_numbers: [
+        "L1 cache reference: 0.5 ns",
+        "L2 cache reference: 7 ns",
+        "Main memory reference: 100 ns",
+        "Send 1K bytes over 1 Gbps network: 10,000 ns = 10 µs",
+        "Read 1 MB sequentially from SSD: 1,000,000 ns = 1 ms",
+        "Round trip within same datacenter: 500,000 ns = 0.5 ms",
+        "Disk seek: 10,000,000 ns = 10 ms",
+        "Send packet CA→Netherlands→CA: 150,000,000 ns = 150 ms"
       ]
     },
 
     'availability': {
       title: 'Availability',
       definition: "Availability refers to the percentage of time a system is operational and accessible to users. It's typically measured as uptime divided by total time, expressed as a percentage (e.g., 99.9% uptime). High availability is crucial for business-critical systems where downtime results in revenue loss, user dissatisfaction, or safety concerns.",
+      sla_table: [
+        { availability: '90% (1 nine)', downtime_year: '36.5 days', downtime_month: '72 hours', downtime_week: '16.8 hours', use_case: 'Batch systems' },
+        { availability: '99% (2 nines)', downtime_year: '3.65 days', downtime_month: '7.2 hours', downtime_week: '1.68 hours', use_case: 'Internal tools' },
+        { availability: '99.9% (3 nines)', downtime_year: '8.76 hours', downtime_month: '43.2 minutes', downtime_week: '10.1 minutes', use_case: 'B2B services' },
+        { availability: '99.99% (4 nines)', downtime_year: '52.6 minutes', downtime_month: '4.32 minutes', downtime_week: '1.01 minutes', use_case: 'Payment systems' },
+        { availability: '99.999% (5 nines)', downtime_year: '5.26 minutes', downtime_month: '25.9 seconds', downtime_week: '6.05 seconds', use_case: 'Critical infrastructure' }
+      ],
       how_it_works: [
         "Redundancy: Multiple instances of critical components eliminate single points of failure and provide backup options",
         "Failover Mechanisms: Automatic switching to backup systems when primary components fail, minimizing service interruption",
@@ -1958,49 +1976,531 @@ const systemDesignData = {
           topics: ['System Design', 'Interview Preparation', 'Deep Dives']
         }
       ]
+    },
+    'courses': {
+      title: 'Online Courses & Learning Platforms',
+      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240219171430/Roadmap-to-Learn-System-Design.webp',
+      items: [
+        {
+          title: 'ByteByteGo',
+          author: 'Alex Xu',
+          level: 'All Levels',
+          price: 'Paid (~$50-100/year)',
+          description: 'Visual, diagram-heavy system design learning platform based on 7 best-selling system design books. Text-based content (not video) makes it easy to review and reference. Covers System Design, OOP Design, and ML System Design with regular updates.',
+          link: 'https://bytebytego.com',
+          topics: ['System Design', 'Visual Learning', 'Interview Prep'],
+          bestFor: 'Engineers who prefer visual learning and want comprehensive coverage'
+        },
+        {
+          title: 'Grokking the System Design Interview',
+          author: 'DesignGurus.io',
+          level: 'Intermediate',
+          price: 'Paid (~$79 one-time)',
+          description: 'Problem-based learning approach with 15+ detailed system design questions covering all FAANG interview patterns. Step-by-step solutions with diagrams and explanations for popular systems like Twitter, Instagram, and Netflix.',
+          link: 'https://www.designgurus.io/course/grokking-the-system-design-interview',
+          topics: ['Interview Preparation', 'FAANG', 'Problem Solving'],
+          bestFor: 'Interview preparation and learning through practice problems'
+        },
+        {
+          title: 'Educative - System Design Complete Guide',
+          author: 'Educative.io',
+          level: 'All Levels',
+          price: 'Subscription (~$18/month)',
+          description: 'Interactive learning platform with hands-on coding exercises, comprehensive system design coverage, and certificate of completion. Covers fundamentals through advanced topics with built-in code execution.',
+          link: 'https://www.educative.io/guide/complete-guide-to-system-design',
+          topics: ['Interactive Learning', 'Hands-on Practice', 'Certification'],
+          bestFor: 'Hands-on learners who want interactive exercises'
+        },
+        {
+          title: 'Zero to Mastery - System Design + Architecture',
+          author: 'Zero to Mastery',
+          level: 'Intermediate',
+          price: 'Subscription (~$39/month)',
+          description: 'Practical, project-based system design course covering architecture patterns with focus on real-world implementation. Includes active community support and career guidance.',
+          link: 'https://zerotomastery.io/courses/system-design/',
+          topics: ['Project-based', 'Architecture Patterns', 'Community'],
+          bestFor: 'Learners who prefer project-based practical learning'
+        },
+        {
+          title: 'FreeCodeCamp - System Design Course',
+          author: 'FreeCodeCamp',
+          level: 'Beginner to Intermediate',
+          price: 'Free',
+          description: 'Comprehensive multi-hour video course covering system design fundamentals through advanced topics. Completely free with high-quality content from experienced engineers.',
+          link: 'https://www.youtube.com/@freecodecamp',
+          topics: ['Fundamentals', 'Free Learning', 'Video Course'],
+          bestFor: 'Budget-conscious learners wanting quality free content'
+        },
+        {
+          title: 'Coursera - Cloud Computing Specializations',
+          author: 'University of Illinois, Duke, Google Cloud',
+          level: 'All Levels',
+          price: 'Audit Free / Certificate Paid (~$49/month)',
+          description: 'Academic courses on distributed systems and cloud architecture from top universities. Can audit for free or pay for graded assignments and certificates.',
+          link: 'https://www.coursera.org',
+          topics: ['Distributed Systems', 'Cloud Architecture', 'Academic'],
+          bestFor: 'Academic learners wanting university-level content'
+        },
+        {
+          title: 'SystemsExpert (AlgoExpert)',
+          author: 'AlgoExpert',
+          level: 'All Levels',
+          price: 'Paid (~$99/year)',
+          description: 'Video-based system design course with practice problems and detailed explanations. Part of the AlgoExpert platform covering both algorithms and systems.',
+          link: 'https://www.algoexpert.io/systems/product',
+          topics: ['Video Learning', 'Practice Problems', 'Comprehensive'],
+          bestFor: 'AlgoExpert users wanting integrated learning'
+        }
+      ]
+    },
+    'blogs': {
+      title: 'Engineering Blogs & Company Tech Blogs',
+      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20240219171430/Roadmap-to-Learn-System-Design.webp',
+      items: [
+        {
+          title: 'Netflix Tech Blog',
+          author: 'Netflix Engineering',
+          description: 'Deep technical articles on microservices, chaos engineering, A/B testing, and streaming infrastructure. Learn how Netflix handles 200M+ subscribers and petabytes of content delivery.',
+          link: 'https://netflixtechblog.com',
+          topics: ['Microservices', 'Chaos Engineering', 'Streaming', 'CDN'],
+          mustRead: ['Netflix: What Happens When You Press Play?', 'Chaos Engineering at Netflix']
+        },
+        {
+          title: 'Uber Engineering',
+          author: 'Uber',
+          description: 'Real-time systems, geospatial databases, machine learning platforms, and payment systems. Insights into building city-scale ride-sharing infrastructure.',
+          link: 'https://eng.uber.com',
+          topics: ['Real-time Systems', 'Geospatial', 'Distributed Databases', 'Payments'],
+          mustRead: ['Schemaless: Uber\'s Scalable Datastore', 'Real-Time Streaming Analytics']
+        },
+        {
+          title: 'Airbnb Engineering',
+          author: 'Airbnb',
+          description: 'Scaling challenges, data infrastructure, search systems, and machine learning applications. Learn how Airbnb handles millions of listings and bookings worldwide.',
+          link: 'https://medium.com/airbnb-engineering',
+          topics: ['Search Systems', 'Data Quality', 'Payments', 'Frontend Infrastructure'],
+          mustRead: ['Scaling Airbnb\'s Payment Platform', 'Data Quality at Airbnb']
+        },
+        {
+          title: 'Meta (Facebook) Engineering',
+          author: 'Meta',
+          description: 'Large-scale distributed systems, data infrastructure, and social networking architecture. Deep dives into TAO, Memcache, and React.',
+          link: 'https://engineering.fb.com',
+          topics: ['Distributed Systems', 'Caching', 'Social Networks', 'Frontend'],
+          mustRead: ['TAO: Facebook\'s Distributed Data Store', 'Scaling Memcache at Facebook']
+        },
+        {
+          title: 'LinkedIn Engineering',
+          author: 'LinkedIn',
+          description: 'Data pipelines, Apache Kafka (created at LinkedIn), recommendation systems, and professional networking infrastructure.',
+          link: 'https://engineering.linkedin.com',
+          topics: ['Data Pipelines', 'Kafka', 'Recommendations', 'Graph Databases'],
+          mustRead: ['Building LinkedIn\'s Real-time Activity Data Pipeline', 'The Log: What every software engineer should know']
+        },
+        {
+          title: 'High Scalability',
+          author: 'Todd Hoff',
+          description: 'Architecture case studies from major tech companies. "How X is Built" series covers Twitter, Instagram, Pinterest, Dropbox and more.',
+          link: 'http://highscalability.com',
+          topics: ['Case Studies', 'Scalability', 'Architecture Patterns'],
+          mustRead: ['Instagram Architecture', 'How Twitter Works', 'Scaling Pinterest']
+        },
+        {
+          title: 'Martin Fowler\'s Blog',
+          author: 'Martin Fowler',
+          description: 'Software architecture patterns, microservices, refactoring, and enterprise application architecture from industry thought leader.',
+          link: 'https://martinfowler.com',
+          topics: ['Architecture Patterns', 'Microservices', 'Refactoring', 'Enterprise'],
+          mustRead: ['Microservices Guide', 'Event Sourcing', 'CQRS Pattern']
+        },
+        {
+          title: 'All Things Distributed',
+          author: 'Werner Vogels (Amazon CTO)',
+          description: 'Distributed systems insights from Amazon\'s CTO covering eventual consistency, dynamo, and building scalable systems.',
+          link: 'https://www.allthingsdistributed.com',
+          topics: ['Distributed Systems', 'AWS', 'Eventual Consistency', 'Leadership'],
+          mustRead: ['Eventually Consistent', 'Amazon\'s Dynamo']
+        },
+        {
+          title: 'AWS Architecture Blog',
+          author: 'Amazon Web Services',
+          description: 'Cloud architecture patterns, best practices, reference architectures, and real customer implementations on AWS.',
+          link: 'https://aws.amazon.com/blogs/architecture/',
+          topics: ['Cloud Architecture', 'AWS', 'Reference Architectures', 'Best Practices']
+        },
+        {
+          title: 'Google Cloud Blog',
+          author: 'Google Cloud',
+          description: 'GCP architecture guidance, Kubernetes patterns, serverless computing, and data analytics at scale.',
+          link: 'https://cloud.google.com/blog/products',
+          topics: ['GCP', 'Kubernetes', 'Serverless', 'Data Analytics']
+        }
+      ]
+    },
+    'tools': {
+      title: 'Tools & Practice Platforms',
+      items: [
+        {
+          title: 'Excalidraw',
+          type: 'Diagramming Tool',
+          price: 'Free',
+          description: 'Open-source whiteboarding tool with hand-drawn style diagrams. Perfect for system design interviews and creating shareable architecture diagrams.',
+          link: 'https://excalidraw.com',
+          topics: ['Diagramming', 'Whiteboarding', 'Open Source']
+        },
+        {
+          title: 'Draw.io (diagrams.net)',
+          type: 'Diagramming Tool',
+          price: 'Free',
+          description: 'Professional architecture diagram tool with extensive shape libraries, AWS/GCP/Azure icons, and integration with various storage services.',
+          link: 'https://app.diagrams.net',
+          topics: ['Professional Diagrams', 'Cloud Icons', 'Integration']
+        },
+        {
+          title: 'Lucidchart',
+          type: 'Diagramming Tool',
+          price: 'Freemium',
+          description: 'Collaborative diagramming platform with real-time collaboration, extensive templates, and team features.',
+          link: 'https://www.lucidchart.com',
+          topics: ['Collaboration', 'Templates', 'Team Features']
+        },
+        {
+          title: 'Pramp',
+          type: 'Mock Interview Platform',
+          price: 'Free',
+          description: 'Free peer-to-peer mock interview platform where you practice with other engineers. Includes system design interview practice.',
+          link: 'https://www.pramp.com',
+          topics: ['Mock Interviews', 'Peer Practice', 'Free']
+        },
+        {
+          title: 'Interviewing.io',
+          type: 'Mock Interview Platform',
+          price: 'Paid (with free tier)',
+          description: 'Anonymous practice interviews with engineers from top companies. Get real feedback on your system design skills.',
+          link: 'https://interviewing.io',
+          topics: ['Anonymous Practice', 'Real Engineers', 'Feedback']
+        },
+        {
+          title: 'Exponent',
+          type: 'Interview Prep Platform',
+          price: 'Paid',
+          description: 'Structured system design courses combined with mock interview practice and community forums.',
+          link: 'https://www.tryexponent.com',
+          topics: ['Structured Learning', 'Mock Interviews', 'Community']
+        },
+        {
+          title: 'LeetCode System Design',
+          type: 'Practice Platform',
+          price: 'Premium ($35/month)',
+          description: 'System design problems with community discussions and solutions. Part of LeetCode Premium subscription.',
+          link: 'https://leetcode.com/discuss/interview-question/system-design',
+          topics: ['Practice Problems', 'Community', 'Discussions']
+        }
+      ]
+    },
+    'github': {
+      title: 'GitHub Repositories & Open Source',
+      items: [
+        {
+          title: 'System Design Primer',
+          author: 'Donne Martin (ex-Facebook)',
+          stars: '270K+',
+          description: 'The most comprehensive system design guide on GitHub. Includes study guide with Anki flashcards, solutions to common interview problems, and extensive resource links.',
+          link: 'https://github.com/donnemartin/system-design-primer',
+          topics: ['Comprehensive Guide', 'Anki Flashcards', 'Interview Problems']
+        },
+        {
+          title: 'Awesome System Design',
+          author: 'Community',
+          stars: '10K+',
+          description: 'Curated list of system design resources including articles, books, courses, and tools organized by topic.',
+          link: 'https://github.com/madd86/awesome-system-design',
+          topics: ['Curated List', 'Resources', 'Community Driven']
+        },
+        {
+          title: 'System Design Interview',
+          author: 'Community',
+          stars: '30K+',
+          description: 'Collection of system design interview questions and solutions with detailed explanations and diagrams.',
+          link: 'https://github.com/checkcheckzz/system-design-interview',
+          topics: ['Interview Questions', 'Solutions', 'Explanations']
+        },
+        {
+          title: 'Awesome Distributed Systems',
+          author: 'Community',
+          stars: '15K+',
+          description: 'Comprehensive list of resources for distributed systems including papers, books, and courses.',
+          link: 'https://github.com/theanalyst/awesome-distributed-systems',
+          topics: ['Distributed Systems', 'Papers', 'Academic']
+        },
+        {
+          title: 'Awesome Scalability',
+          author: 'Community',
+          stars: '50K+',
+          description: 'Reading list for building scalable, high-availability, high-stability systems including case studies.',
+          link: 'https://github.com/binhnguyennus/awesome-scalability',
+          topics: ['Scalability', 'Case Studies', 'High Availability']
+        }
+      ]
     }
   },
 
   // COMPLETE GUIDE - Interview preparation guide with practical problems
   complete_guide: {
     'framework': {
-      title: 'Interview Framework',
-      introduction: "The proven 7-step approach for system design interviews that demonstrates structured thinking and covers all critical aspects.",
+      title: 'Interview Framework: RADIO Method',
+      introduction: "The proven RADIO framework for system design interviews that demonstrates structured thinking and covers all critical aspects. This approach is used by successful candidates at FAANG and top tech companies.",
       content: `
         <div class="framework-steps">
           <div class="architecture-image">
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240715175832/System-Design-Interview-Framework.webp" alt="7-Step System Design Interview Framework" class="framework-diagram" />
-            <div class="diagram-caption">Figure 1: The 7-Step System Design Interview Framework</div>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240715175832/System-Design-Interview-Framework.webp" alt="System Design Interview Framework" class="framework-diagram" />
+            <div class="diagram-caption">Figure 1: The RADIO System Design Interview Framework</div>
           </div>
-          
-          <h3>The 7-Step System Design Framework</h3>
-          <ol class="framework-list">
-            <li><strong>Clarify Requirements</strong> - Ask clarifying questions about functional and non-functional requirements</li>
-            <li><strong>Estimate Scale</strong> - Calculate back-of-the-envelope estimates for data size, QPS, storage</li>
-            <li><strong>Define APIs</strong> - Design the core APIs that the system will expose</li>
-            <li><strong>High-Level Design</strong> - Create the overall architecture with major components</li>
-            <li><strong>Detailed Design</strong> - Deep dive into critical components and data flow</li>
-            <li><strong>Scale the Design</strong> - Address bottlenecks and scaling challenges</li>
-            <li><strong>Wrap Up</strong> - Summarize design choices and discuss trade-offs</li>
-          </ol>
-          
-          <div class="framework-details">
-            <h4>Framework Application</h4>
-            <ul>
-              <li><strong>Start with Requirements:</strong> Always clarify functional and non-functional requirements first</li>
-              <li><strong>Think Out Loud:</strong> Explain your reasoning for each design decision</li>
-              <li><strong>Consider Trade-offs:</strong> Discuss alternatives and why you chose specific approaches</li>
-              <li><strong>Scale Incrementally:</strong> Start simple, then add complexity and scale considerations</li>
-              <li><strong>Address Bottlenecks:</strong> Identify potential failure points and mitigation strategies</li>
-            </ul>
 
-            <h4>Technical Depth</h4>
+          <h3>The RADIO Framework</h3>
+          <p>Use this systematic approach to structure your system design interview responses:</p>
+
+          <div class="radio-framework">
+            <div class="radio-step">
+              <h4>R - Requirements Clarification</h4>
+              <p><strong>Spend 5-10 minutes clarifying the problem scope</strong></p>
+
+              <h5>Functional Requirements</h5>
+              <ul>
+                <li>What features are needed? (e.g., "Users can post tweets")</li>
+                <li>What are the core use cases? (e.g., "View timeline, follow users")</li>
+                <li>What are the inputs and outputs?</li>
+                <li>What features are in scope vs. out of scope?</li>
+              </ul>
+
+              <h5>Non-Functional Requirements</h5>
+              <ul>
+                <li><strong>Scale:</strong> How many daily/monthly active users? Read/write ratio?</li>
+                <li><strong>Performance:</strong> What's the expected latency? (e.g., < 200ms for timeline)</li>
+                <li><strong>Availability:</strong> What's the SLA target? (e.g., 99.99% uptime)</li>
+                <li><strong>Consistency:</strong> Strong vs. eventual consistency needs?</li>
+                <li><strong>Data:</strong> How much data? Retention period?</li>
+              </ul>
+
+              <h5>Example Questions to Ask</h5>
+              <div class="code-block">
+                <pre>
+"How many daily active users do we expect?"
+"What's the read/write ratio?"
+"What's the expected latency for key operations?"
+"Do we need strong consistency or is eventual consistency acceptable?"
+"Any specific compliance requirements (GDPR, HIPAA)?"
+"Should we design for a specific geographic region or global?"</pre>
+              </div>
+            </div>
+
+            <div class="radio-step">
+              <h4>A - API Design</h4>
+              <p><strong>Define the interface (3-5 minutes)</strong></p>
+
+              <h5>Design Core APIs</h5>
+              <p>Focus on the most important operations. Use REST or RPC style.</p>
+
+              <h5>Example: URL Shortener</h5>
+              <div class="code-block">
+                <pre>
+// Shorten URL
+POST /api/v1/shorten
+Request: { "long_url": "https://example.com/..." }
+Response: { "short_url": "https://short.ly/abc123" }
+
+// Redirect
+GET /api/v1/:short_code
+Response: HTTP 302 Redirect to original URL
+
+// Analytics
+GET /api/v1/analytics/:short_code
+Response: { "clicks": 1500, "geo_distribution": {...} }</pre>
+              </div>
+
+              <h5>Example: Twitter</h5>
+              <div class="code-block">
+                <pre>
+POST   /api/v1/tweets
+GET    /api/v1/timeline/home
+GET    /api/v1/timeline/user/:user_id
+POST   /api/v1/follow/:user_id
+POST   /api/v1/like/:tweet_id</pre>
+              </div>
+            </div>
+
+            <div class="radio-step">
+              <h4>D - Data Model</h4>
+              <p><strong>Design your schema and choose storage (5-10 minutes)</strong></p>
+
+              <h5>Schema Design</h5>
+              <p>Define entities, relationships, and choose appropriate storage.</p>
+
+              <h5>Example: Twitter Schema</h5>
+              <div class="code-block">
+                <pre>
+users (
+  id BIGINT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE,
+  email VARCHAR(255),
+  created_at TIMESTAMP
+)
+
+tweets (
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT,
+  content TEXT(280),
+  created_at TIMESTAMP,
+  likes_count INT,
+  retweets_count INT
+)
+
+follows (
+  follower_id BIGINT,
+  followee_id BIGINT,
+  created_at TIMESTAMP,
+  PRIMARY KEY (follower_id, followee_id)
+)</pre>
+              </div>
+
+              <h5>Storage Choices</h5>
+              <ul>
+                <li><strong>SQL (PostgreSQL/MySQL):</strong> User profiles, relationships, transactional data</li>
+                <li><strong>NoSQL (Cassandra/DynamoDB):</strong> Tweets, high-write workloads</li>
+                <li><strong>Cache (Redis):</strong> Timeline cache, session data, hot tweets</li>
+                <li><strong>Object Storage (S3):</strong> Media files (images, videos)</li>
+                <li><strong>Search (Elasticsearch):</strong> Full-text search for tweets/users</li>
+              </ul>
+            </div>
+
+            <div class="radio-step">
+              <h4>I - Implementation (High-Level Design)</h4>
+              <p><strong>Draw the architecture diagram (10-15 minutes)</strong></p>
+
+              <h5>Core Components</h5>
+              <p>Start with major building blocks:</p>
+
+              <div class="code-block">
+                <pre>
+Client (Web/Mobile)
+    ↓
+Load Balancer
+    ↓
+API Gateway / API Servers
+    ↓↓↓
+┌─────────────┬─────────────┬─────────────┐
+│   Cache     │  Services   │  Database   │
+│  (Redis)    │  Layer      │  (Primary)  │
+└─────────────┴─────────────┴─────────────┘
+                   ↓
+         Message Queue (Kafka)
+                   ↓
+              Background Workers
+                   ↓
+           Analytics Database</pre>
+              </div>
+
+              <h5>Example: Twitter Write Path</h5>
+              <div class="code-block">
+                <pre>
+User posts tweet
+    ↓
+API Server validates and stores in DB
+    ↓
+Publishes to Message Queue (Kafka)
+    ↓
+Fan-out Service picks up tweet
+    ↓
+Writes to followers' timeline caches (Redis)
+    ↓
+Real-time notification to active followers</pre>
+              </div>
+
+              <h5>Example: Twitter Read Path</h5>
+              <div class="code-block">
+                <pre>
+User requests timeline
+    ↓
+Check Redis cache for pre-computed timeline
+    ↓
+Cache Hit: Return immediately (fast path)
+Cache Miss: Fetch from DB and cache (slow path)</pre>
+              </div>
+            </div>
+
+            <div class="radio-step">
+              <h4>O - Optimize & Dive Deep</h4>
+              <p><strong>Address bottlenecks and scale the design (15-20 minutes)</strong></p>
+
+              <h5>Identify Bottlenecks</h5>
+              <ul>
+                <li><strong>Database:</strong> Too many reads/writes? Consider sharding, replication, or caching</li>
+                <li><strong>API Servers:</strong> CPU-bound? Add horizontal scaling and load balancing</li>
+                <li><strong>Network:</strong> High latency? Use CDN, edge servers, or geographic distribution</li>
+                <li><strong>Single Point of Failure:</strong> Identify and eliminate SPOFs with redundancy</li>
+              </ul>
+
+              <h5>Scaling Strategies</h5>
+              <ul>
+                <li><strong>Database Sharding:</strong> Partition by user_id, geographic region, or time</li>
+                <li><strong>Caching Layers:</strong> Multi-level caching (CDN → Redis → Database)</li>
+                <li><strong>Async Processing:</strong> Use message queues for non-critical operations</li>
+                <li><strong>Read Replicas:</strong> Scale read-heavy workloads with database replicas</li>
+                <li><strong>CDN:</strong> Serve static content and API responses from edge locations</li>
+              </ul>
+
+              <h5>Deep Dive Topics (Choose 2-3)</h5>
+              <ul>
+                <li><strong>Timeline Generation:</strong> Fan-out on write vs. fan-out on read (hybrid approach)</li>
+                <li><strong>Rate Limiting:</strong> Token bucket algorithm to prevent abuse</li>
+                <li><strong>Search:</strong> Elasticsearch for full-text search with ranking algorithms</li>
+                <li><strong>Monitoring:</strong> Metrics, logs, traces, and alerting</li>
+                <li><strong>Security:</strong> Authentication (OAuth), encryption (TLS), input validation</li>
+              </ul>
+
+              <h5>Trade-off Discussions</h5>
+              <ul>
+                <li><strong>Consistency vs. Availability:</strong> CAP theorem trade-offs</li>
+                <li><strong>Latency vs. Throughput:</strong> Optimize for speed or volume?</li>
+                <li><strong>Cost vs. Performance:</strong> Managed services vs. self-hosted</li>
+                <li><strong>Complexity vs. Flexibility:</strong> Monolith vs. microservices</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="framework-details">
+            <h4>Interview Timeline (45-60 minutes)</h4>
+            <table class="interview-timeline">
+              <tr>
+                <td><strong>0-10 min</strong></td>
+                <td>Requirements Clarification (R)</td>
+              </tr>
+              <tr>
+                <td><strong>10-15 min</strong></td>
+                <td>API Design (A) + Data Model (D)</td>
+              </tr>
+              <tr>
+                <td><strong>15-30 min</strong></td>
+                <td>Implementation - High-Level Design (I)</td>
+              </tr>
+              <tr>
+                <td><strong>30-50 min</strong></td>
+                <td>Optimize - Deep Dives & Bottlenecks (O)</td>
+              </tr>
+              <tr>
+                <td><strong>50-60 min</strong></td>
+                <td>Q&A and Wrap-up</td>
+              </tr>
+            </table>
+
+            <h4>What Interviewers Look For</h4>
             <ul>
-              <li><strong>Data Storage:</strong> Choose appropriate databases based on access patterns and consistency requirements</li>
-              <li><strong>Caching Strategy:</strong> Implement multi-level caching for performance optimization</li>
-              <li><strong>Load Balancing:</strong> Distribute traffic effectively across servers and regions</li>
-              <li><strong>Monitoring:</strong> Include observability and alerting in your designs</li>
-              <li><strong>Security:</strong> Consider authentication, authorization, and data protection</li>
+              <li><strong>Problem Clarification:</strong> Do you ask the right questions?</li>
+              <li><strong>System Thinking:</strong> Can you see the big picture and break it down?</li>
+              <li><strong>Technical Depth:</strong> Do you understand how components work?</li>
+              <li><strong>Trade-off Analysis:</strong> Can you evaluate alternatives and justify decisions?</li>
+              <li><strong>Communication:</strong> Can you explain complex concepts clearly?</li>
+              <li><strong>Scalability Mindset:</strong> Do you consider scale from the beginning?</li>
             </ul>
 
             <h4>Common Follow-up Questions</h4>
@@ -2010,6 +2510,19 @@ const systemDesignData = {
               <li>"How would you monitor and debug this system?"</li>
               <li>"What security considerations are important?"</li>
               <li>"How would you reduce latency for global users?"</li>
+              <li>"How would you handle data consistency across regions?"</li>
+              <li>"What's your strategy for database backups and disaster recovery?"</li>
+            </ul>
+
+            <h4>Common Pitfalls to Avoid</h4>
+            <ul>
+              <li>Jumping to solutions without clarifying requirements</li>
+              <li>Ignoring scale and non-functional requirements</li>
+              <li>Over-engineering for current scale vs. under-designing for future growth</li>
+              <li>Not discussing trade-offs and alternatives</li>
+              <li>Working silently instead of thinking out loud</li>
+              <li>Focusing only on happy paths, ignoring edge cases and failures</li>
+              <li>Not managing time effectively across different sections</li>
             </ul>
           </div>
         </div>
