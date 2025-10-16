@@ -6,14 +6,19 @@ description: "System Design Hub - A comprehensive guide to system design from ju
 permalink: /
 ---
 
-# Welcome to System Design Hub
-{: .fs-9 }
+<div style="text-align: center; padding: 3rem 0; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: 20px; margin-bottom: 3rem;">
+  <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+    Welcome to System Design Hub
+  </h1>
+  <p style="font-size: 1.3rem; color: #a5b4fc; max-width: 800px; margin: 0 auto;">
+    Your comprehensive guide to mastering system design - from Junior Engineer to Distinguished Engineer.
+  </p>
+</div>
 
-Your comprehensive guide to mastering system design - from Junior Engineer to Distinguished Engineer.
-{: .fs-6 .fw-300 }
-
-[Get Started](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/AshutoshanandSinha/system-design-hub){: .btn .fs-5 .mb-4 .mb-md-0 }
+<div style="text-align: center; margin: 2rem 0;">
+  <a href="#getting-started" style="display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; margin: 0.5rem; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s;">Get Started</a>
+  <a href="https://github.com/AshutoshanandSinha/system-design-hub" style="display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #1f2937 0%, #111827 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; margin: 0.5rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: all 0.3s;">View on GitHub</a>
+</div>
 
 ---
 
@@ -48,7 +53,7 @@ Start here if you're new to system design or have limited experience with distri
 - ✅ Simple architecture patterns
 - ✅ HTTP, REST APIs, and basic networking
 
-[Start Learning →]({% link docs/fundamentals/index.md %}){: .btn .btn-green }
+<a href="{{ '/docs/fundamentals/' | relative_url }}" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); transition: all 0.3s;">Start Learning →</a>
 
 </div>
 
@@ -68,7 +73,7 @@ You understand the basics and want to design more complex systems.
 - ✅ Microservices architecture
 - ✅ Load balancing and CDNs
 
-[Explore Components →]({% link docs/components/index.md %}){: .btn .btn-blue }
+<a href="{{ '/docs/components/' | relative_url }}" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); transition: all 0.3s;">Explore Components →</a>
 
 </div>
 
@@ -88,7 +93,7 @@ You're designing systems independently and making architectural decisions.
 - ✅ System reliability and monitoring
 - ✅ Architecture decision frameworks
 
-[Study Patterns →]({% link docs/patterns/index.md %}){: .btn .btn-purple }
+<a href="{{ '/docs/patterns/' | relative_url }}" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); transition: all 0.3s;">Study Patterns →</a>
 
 </div>
 
@@ -121,14 +126,14 @@ You're architecting complex systems and influencing technical strategy.
 
 ### 🆕 New to System Design?
 
-1. 📚 **Read the Fundamentals** - Start with [Core Concepts]({% link docs/fundamentals/core-concepts.md %})
-2. 🏗️ **Learn the Components** - Understand [Infrastructure Building Blocks]({% link docs/components/index.md %})
-3. 🎨 **Study Design Patterns** - Explore [Common Patterns]({% link docs/patterns/index.md %})
-4. 💪 **Practice** - Work through [Interview Problems]({% link docs/interview-prep/index.md %})
+1. 📚 **Read the Fundamentals** - Start with <a href="{{ '/docs/fundamentals/core-concepts' | relative_url }}">Core Concepts</a>
+2. 🏗️ **Learn the Components** - Understand <a href="{{ '/docs/components/' | relative_url }}">Infrastructure Building Blocks</a>
+3. 🎨 **Study Design Patterns** - Explore <a href="{{ '/docs/patterns/' | relative_url }}">Common Patterns</a>
+4. 💪 **Practice** - Work through <a href="{{ '/docs/interview-prep/' | relative_url }}">Interview Problems</a>
 
 ### 🎯 Preparing for Interviews?
 
-Check out our [Interview Preparation Guide]({% link docs/interview-prep/index.md %}) with:
+Check out our <a href="{{ '/docs/interview-prep/' | relative_url }}">Interview Preparation Guide</a> with:
 - ✅ Common system design questions
 - ✅ Step-by-step solution approaches
 - ✅ Tips for different experience levels
@@ -204,7 +209,7 @@ Explore our Advanced Topics (Coming Soon) covering:
 - 🎯 **Tech Dummies Narendra L** - Practical examples
 - 🎨 **ByteByteGo** - Visual explanations
 
-[View All Resources →]({% link docs/resources/index.md %}){: .btn }
+<a href="{{ '/docs/resources/' | relative_url }}" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s; margin-top: 1rem;">View All Resources →</a>
 
 ---
 

@@ -51,8 +51,8 @@ Design patterns are proven solutions to common problems in system design. Unders
 ### Architecture Patterns
 Core architectural styles for organizing your system.
 
-<div style="text-align: center; margin: 2rem 0;">
-  <img src="https://raw.githubusercontent.com/donnemartin/system-design-primer/master/images/X20obNs.png" alt="Microservices" style="max-width: 700px; border-radius: 12px; box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);">
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+  <img src="https://raw.githubusercontent.com/donnemartin/system-design-primer/master/images/X20obNs.png" alt="Microservices" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 60px rgba(139, 92, 246, 0.5); border: 2px solid rgba(139, 92, 246, 0.3);">
 </div>
 
 | Aspect | Monolithic | Microservices |
